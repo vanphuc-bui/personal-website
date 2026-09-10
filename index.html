@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>My Personal Website</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background: #f7f7f7;
+      color: #222;
+      line-height: 1.6;
+    }
+
+    nav {
+      max-width: 1000px;
+      margin: auto;
+      padding: 25px 20px;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    nav a {
+      color: #222;
+      text-decoration: none;
+      margin-left: 20px;
+    }
+
+    .hero {
+      max-width: 1000px;
+      margin: auto;
+      padding: 120px 20px;
+    }
+
+    .hero h1 {
+      font-size: 55px;
+      margin-bottom: 20px;
+    }
+
+    .hero p {
+      font-size: 21px;
+      max-width: 650px;
+      color: #555;
+    }
+
+    .button {
+      display: inline-block;
+      margin-top: 30px;
+      padding: 14px 24px;
+      background: #222;
+      color: white;
+      text-decoration: none;
+      border-radius: 8px;
+    }
+
+    section {
+      max-width: 1000px;
+      margin: auto;
+      padding: 80px 20px;
+    }
+
+    h2 {
+      font-size: 34px;
+      margin-bottom: 25px;
+    }
+
+    .projects {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+
+    .project {
+      background: white;
+      padding: 30px;
+      border-radius: 12px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 40px;
+      color: #777;
+    }
+
+    @media (max-width: 600px) {
+      .hero h1 {
+        font-size: 40px;
+      }
+
+      nav {
+        flex-direction: column;
+      }
+
+      nav div {
+        margin-top: 10px;
+      }
+
+      nav a {
+        margin-left: 0;
+        margin-right: 15px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<nav>
+  <strong>YOUR NAME</strong>
+
+  <div>
+    <a href="#about">About</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
+  </div>
+</nav>
+
+
+<div class="hero">
+
+  <h1>Hello, I'm YOUR NAME 👋</h1>
+
+  <p>
+    I am an engineer and researcher interested in wireless communications,
+    5G/6G, satellite communications and machine learning.
+  </p>
+
+  <a class="button" href="#contact">
+    Contact me
+  </a>
+
+</div>
+
+
+<section id="about">
+
+  <h2>About me</h2>
+
+  <p>
+    Write a short introduction about yourself here.
+    You can describe your work, education, interests and experience.
+  </p>
+
+</section>
+
+
+<section id="projects">
+
+  <h2>Projects</h2>
+
+  <div class="projects">
+
+    <div class="project">
+      <h3>Project 1</h3>
+      <p>Description of your first project.</p>
+    </div>
+
+    <div class="project">
+      <h3>Project 2</h3>
+      <p>Description of your second project.</p>
+    </div>
+
+    <div class="project">
+      <h3>Project 3</h3>
+      <p>Description of your third project.</p>
+    </div>
+
+  </div>
+
+</section>
+
+
+<section id="contact">
+
+  <h2>Contact</h2>
+
+  <p>
+    Email:
+    <a href="mailto:your@email.com">
+      your@email.com
+    </a>
+  </p>
+
+</section>
+
+
+<footer>
+
+  © 2026 YOUR NAME
+
+</footer>
+
+</body>
+</html>
