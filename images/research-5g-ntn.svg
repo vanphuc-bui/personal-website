@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 865" role="img" aria-label="5G 6G NTN physical layer visualization">
+<defs>
+  <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#071521"/><stop offset="1" stop-color="#0b2238"/></linearGradient>
+  <linearGradient id="beam" x1="0" y1="0" x2="1" y2="0"><stop stop-color="#2f89ff" stop-opacity=".08"/><stop offset=".5" stop-color="#58b7ff" stop-opacity=".34"/><stop offset="1" stop-color="#2f89ff" stop-opacity=".04"/></linearGradient>
+  <filter id="glow"><feGaussianBlur stdDeviation="6" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+</defs>
+<rect width="1600" height="865" fill="url(#bg)"/>
+<g stroke="#7bbcff" stroke-opacity=".08" stroke-width="1">
+  <path d="M0 145H1600M0 290H1600M0 435H1600M0 580H1600M0 725H1600"/>
+  <path d="M160 0V865M320 0V865M480 0V865M640 0V865M800 0V865M960 0V865M1120 0V865M1280 0V865M1440 0V865"/>
+</g>
+<g transform="translate(235 190)" stroke="#6db8ff" fill="none" stroke-width="10" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M95 420V185M40 420h110M58 185h74M95 185l-54 235M95 185l54 235"/>
+  <path d="M12 130c45-55 120-55 166 0M-35 78c72-91 190-91 262 0" stroke-opacity=".85"/>
+  <circle cx="95" cy="185" r="16" fill="#6db8ff" stroke="none" filter="url(#glow)"/>
+</g>
+<path d="M430 458 C500 410 555 510 625 458 S750 405 820 458 S945 510 1015 458" fill="none" stroke="#4da2ff" stroke-width="9" filter="url(#glow)"/>
+<path d="M430 496 C500 452 555 540 625 496 S750 452 820 496 S945 540 1015 496" fill="none" stroke="#7ed0ff" stroke-opacity=".55" stroke-width="4"/>
+<g transform="translate(1115 205)">
+  <ellipse cx="170" cy="160" rx="155" ry="120" fill="#0a1c2b" stroke="#72bdff" stroke-opacity=".25" stroke-width="3"/>
+  <g fill="#68b6ff" filter="url(#glow)">
+    <circle cx="85" cy="115" r="10"/><circle cx="145" cy="85" r="10"/><circle cx="210" cy="110" r="10"/><circle cx="260" cy="72" r="10"/>
+    <circle cx="105" cy="170" r="10"/><circle cx="175" cy="155" r="10"/><circle cx="245" cy="175" r="10"/><circle cx="295" cy="138" r="10"/>
+    <circle cx="72" cy="220" r="10"/><circle cx="145" cy="225" r="10"/><circle cx="218" cy="225" r="10"/><circle cx="282" cy="214" r="10"/>
+  </g>
+</g>
+<g transform="translate(1215 78) rotate(-12)" stroke="#8ecaff" stroke-width="5" fill="#0b2135">
+  <rect x="70" y="45" width="120" height="72" rx="10"/>
+  <rect x="0" y="35" width="62" height="92" rx="5" fill="#103150"/>
+  <rect x="198" y="35" width="62" height="92" rx="5" fill="#103150"/>
+  <path d="M130 117v62M105 179h50"/>
+</g>
+<path d="M1335 260L1160 520L1490 520Z" fill="url(#beam)"/>
+<text x="85" y="92" fill="#a7d8ff" fill-opacity=".76" font-family="Arial, sans-serif" font-size="28" font-weight="700" letter-spacing="3">PHY · SYNCHRONIZATION · NTN</text>
+</svg>
