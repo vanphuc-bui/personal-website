@@ -177,11 +177,20 @@
 
     .hero-photo {
       position: absolute;
-      inset: var(--nav) 0 0 43%;
+      top: var(--nav);
+      bottom: 0;
+
+      /* Keep the hero image inside the same centered 1180px content area.
+         This prevents it from stretching all the way to the viewport edges. */
+      left: max(43%, calc(50% - (var(--max) / 2) + 430px));
+      right: max(22px, calc((100vw - var(--max)) / 2));
+
+      overflow: hidden;
+      background-color: #06111e;
       background:
         linear-gradient(90deg, #06111e 0%, rgba(6,17,30,.84) 10%, rgba(6,17,30,.22) 38%, rgba(6,17,30,.05) 100%),
         linear-gradient(0deg, rgba(6,17,30,.65), transparent 45%),
-        url("images/hero-satellite.jpg") center / cover no-repeat;
+        url("images/hero-satellite.jpg") center right / cover no-repeat;
     }
 
     .hero-photo::after {
@@ -737,7 +746,7 @@
       .research-grid { grid-template-columns: repeat(2, 1fr); }
       .timeline { grid-template-columns: repeat(2, 1fr); }
       .about-education { grid-template-columns: 1fr; }
-      .hero-photo { inset-left: 34%; opacity: .60; }
+      .hero-photo { left: 36%; right: 20px; opacity: .60; }
       .beyond { grid-template-columns: 1fr; }
       .beyond-copy { padding: 50px 30px; }
     }
