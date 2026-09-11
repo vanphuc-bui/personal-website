@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 865" role="img" aria-label="Digital twin and ISAC visualization">
+<defs>
+  <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#071521"/><stop offset="1" stop-color="#0b2238"/></linearGradient>
+  <linearGradient id="link" x1="0" y1="0" x2="1" y2="0"><stop stop-color="#4da4ff" stop-opacity=".08"/><stop offset=".5" stop-color="#78c7ff" stop-opacity=".48"/><stop offset="1" stop-color="#4da4ff" stop-opacity=".08"/></linearGradient>
+  <filter id="glow"><feGaussianBlur stdDeviation="5" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+</defs>
+<rect width="1600" height="865" fill="url(#bg)"/>
+<g stroke="#76bfff" stroke-opacity=".08"><path d="M0 145H1600M0 290H1600M0 435H1600M0 580H1600M0 725H1600"/><path d="M160 0V865M320 0V865M480 0V865M640 0V865M800 0V865M960 0V865M1120 0V865M1280 0V865M1440 0V865"/></g>
+<g transform="translate(160 365)">
+  <rect x="0" y="72" width="390" height="180" rx="26" fill="#0d2941" stroke="#74c0ff" stroke-width="5"/>
+  <rect x="65" y="0" width="220" height="115" rx="20" fill="#10324f" stroke="#74c0ff" stroke-width="5"/>
+  <circle cx="90" cy="272" r="42" fill="#07131f" stroke="#74c0ff" stroke-width="7"/>
+  <circle cx="300" cy="272" r="42" fill="#07131f" stroke="#74c0ff" stroke-width="7"/>
+  <circle cx="195" cy="130" r="12" fill="#7ac8ff" filter="url(#glow)"/>
+  <path d="M195 130v-95M158 48c22-28 52-28 74 0M135 15c36-49 84-49 120 0" fill="none" stroke="#82ccff" stroke-width="7" stroke-linecap="round"/>
+</g>
+<g transform="translate(1025 255)" opacity=".95">
+  <rect x="0" y="72" width="390" height="180" rx="26" fill="none" stroke="#68b6ff" stroke-width="5" stroke-dasharray="16 13"/>
+  <rect x="65" y="0" width="220" height="115" rx="20" fill="none" stroke="#68b6ff" stroke-width="5" stroke-dasharray="16 13"/>
+  <circle cx="90" cy="272" r="42" fill="none" stroke="#68b6ff" stroke-width="7" stroke-dasharray="14 12"/>
+  <circle cx="300" cy="272" r="42" fill="none" stroke="#68b6ff" stroke-width="7" stroke-dasharray="14 12"/>
+  <circle cx="195" cy="130" r="12" fill="#7ac8ff" filter="url(#glow)"/>
+  <path d="M195 130v-95M158 48c22-28 52-28 74 0M135 15c36-49 84-49 120 0" fill="none" stroke="#82ccff" stroke-width="7" stroke-linecap="round"/>
+</g>
+<path d="M560 515C690 395 850 395 1010 455" fill="none" stroke="url(#link)" stroke-width="14" stroke-linecap="round" filter="url(#glow)"/>
+<path d="M560 558C700 650 850 650 1010 548" fill="none" stroke="#76c3ff" stroke-opacity=".32" stroke-width="5" stroke-dasharray="16 16"/>
+<g transform="translate(795 475)" fill="none" stroke="#78c7ff" stroke-width="6" stroke-linecap="round">
+  <circle r="18" fill="#78c7ff" stroke="none" filter="url(#glow)"/>
+  <path d="M-55 0a55 55 0 0 1 110 0M-100 0a100 100 0 0 1 200 0M-150 0a150 150 0 0 1 300 0" opacity=".72"/>
+</g>
+<g transform="translate(795 475)" fill="#9ed6ff"><circle cx="0" cy="-154" r="9"/><circle cx="130" cy="-75" r="9"/><circle cx="-128" cy="-75" r="9"/></g>
+<text x="85" y="92" fill="#a7d8ff" fill-opacity=".76" font-family="Arial, sans-serif" font-size="28" font-weight="700" letter-spacing="3">SENSING · STATE ESTIMATION · CLOSED LOOP CONTROL</text>
+</svg>
