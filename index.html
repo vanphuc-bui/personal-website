@@ -385,7 +385,46 @@
     .org { color: #d1dae6; margin-bottom: 10px; }
     .desc { color: var(--muted); }
 
-    .pub-list { margin-top: 52px; border-top: 1px solid var(--line); }
+    .featured-pub {
+      margin-top: 52px;
+      padding: 30px;
+      border-radius: 24px;
+      border: 1px solid rgba(124,231,255,.22);
+      background:
+        radial-gradient(circle at 100% 0%, rgba(124,231,255,.10), transparent 35%),
+        linear-gradient(135deg, rgba(124,231,255,.07), rgba(155,135,255,.04));
+      box-shadow: 0 24px 70px rgba(0,0,0,.18);
+    }
+    .featured-badge {
+      display: inline-flex;
+      padding: 7px 10px;
+      margin-bottom: 18px;
+      border-radius: 999px;
+      border: 1px solid rgba(124,231,255,.22);
+      background: rgba(124,231,255,.07);
+      color: var(--cyan);
+      font-size: 11px;
+      font-weight: 800;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+    }
+    .featured-pub h3 {
+      max-width: 920px;
+      font-size: clamp(23px, 3vw, 32px);
+      line-height: 1.25;
+      letter-spacing: -.03em;
+      margin-bottom: 12px;
+    }
+    .featured-pub .authors {
+      color: #d2dce8;
+      font-size: 14px;
+      margin-bottom: 8px;
+    }
+    .featured-pub .venue {
+      color: var(--muted);
+      margin-bottom: 20px;
+    }
+    .pub-list { margin-top: 30px; border-top: 1px solid var(--line); }
     .pub {
       display: grid;
       grid-template-columns: 75px 1fr auto;
@@ -807,6 +846,17 @@
         <p class="lead reveal">
           Selected peer-reviewed work. For the complete and most up-to-date list, see Google Scholar.
         </p>
+
+        <article class="featured-pub reveal">
+          <div class="featured-badge">Featured · IEEE Communications Magazine</div>
+          <h3>The Role of Game Networking in the Fusion of Physical and Digital Worlds through 6G Wireless Networks</h3>
+          <div class="authors">Van-Phuc Bui · Shashi Raj Pandey · Andreas Casparsen · Federico Chiariotti · Petar Popovski</div>
+          <div class="venue">IEEE Communications Magazine · Vol. 63, No. 3 · March 2025 · pp. 204–211</div>
+          <div class="pub-actions" style="justify-content:flex-start">
+            <a class="btn btn-primary" href="https://doi.org/10.1109/MCOM.001.240089" target="_blank" rel="noopener">View publication ↗</a>
+            <a class="btn btn-secondary" href="https://arxiv.org/abs/2302.01672" target="_blank" rel="noopener">Preprint ↗</a>
+          </div>
+        </article>
 
         <div class="pub-list">
           <article class="pub reveal">
