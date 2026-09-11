@@ -1,33 +1,24 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 865" role="img" aria-label="Satellite communications visualization">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 865" role="img" aria-label="Abstract satellite communications visual">
 <defs>
-  <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#06131f"/><stop offset="1" stop-color="#0a2136"/></linearGradient>
-  <radialGradient id="earth" cx="50%" cy="20%" r="85%"><stop stop-color="#173c60"/><stop offset=".72" stop-color="#0b2740"/><stop offset="1" stop-color="#071724"/></radialGradient>
-  <linearGradient id="beam" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#75c7ff" stop-opacity=".22"/><stop offset="1" stop-color="#3b91ff" stop-opacity=".02"/></linearGradient>
-  <filter id="glow"><feGaussianBlur stdDeviation="5" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#06121e"/><stop offset=".58" stop-color="#0a1a2c"/><stop offset="1" stop-color="#102842"/></linearGradient>
+  <radialGradient id="earth" cx="50%" cy="0%" r="100%"><stop stop-color="#1e5d91" stop-opacity=".62"/><stop offset=".35" stop-color="#113654" stop-opacity=".5"/><stop offset="1" stop-color="#07131f" stop-opacity="0"/></radialGradient>
+  <radialGradient id="orb" cx="50%" cy="50%" r="50%"><stop stop-color="#76c8ff" stop-opacity=".28"/><stop offset="1" stop-color="#76c8ff" stop-opacity="0"/></radialGradient>
+  <filter id="blur"><feGaussianBlur stdDeviation="44"/></filter>
+  <filter id="grain"><feTurbulence type="fractalNoise" baseFrequency=".8" numOctaves="2" seed="11"/><feColorMatrix type="saturate" values="0"/><feComponentTransfer><feFuncA type="table" tableValues="0 .03"/></feComponentTransfer></filter>
 </defs>
 <rect width="1600" height="865" fill="url(#bg)"/>
-<g fill="none" stroke="#64b4ff" stroke-opacity=".16" stroke-width="3">
-  <path d="M80 610C350 190 1230 175 1510 610"/>
-  <path d="M155 650C410 300 1175 285 1450 650"/>
-  <path d="M255 700C490 420 1080 405 1350 700"/>
+<ellipse cx="790" cy="860" rx="860" ry="430" fill="url(#earth)"/>
+<ellipse cx="1180" cy="250" rx="360" ry="260" fill="url(#orb)" filter="url(#blur)"/>
+<g fill="none" stroke-linecap="round">
+  <path d="M120 650 C370 210 1210 180 1515 635" stroke="#62b5f4" stroke-opacity=".16" stroke-width="3"/>
+  <path d="M210 695 C455 340 1115 300 1425 675" stroke="#80c9ff" stroke-opacity=".22" stroke-width="4"/>
+  <path d="M360 735 C560 495 1045 460 1280 720" stroke="#9bd8ff" stroke-opacity=".11" stroke-width="2"/>
 </g>
-<circle cx="800" cy="985" r="520" fill="url(#earth)" stroke="#6fbfff" stroke-opacity=".22" stroke-width="4"/>
-<path d="M300 690c145-70 285-90 420-48 100 31 198 82 335 58 100-18 175-58 245-90" fill="none" stroke="#5aaeff" stroke-opacity=".22" stroke-width="3"/>
-<g transform="translate(705 160) rotate(-7)" stroke="#98d4ff" stroke-width="6" fill="#0c2942">
-  <rect x="110" y="68" width="148" height="92" rx="14"/>
-  <rect x="6" y="56" width="90" height="116" rx="7" fill="#123858"/>
-  <rect x="272" y="56" width="90" height="116" rx="7" fill="#123858"/>
-  <path d="M184 160v74M145 234h78M184 68V26M166 26h36"/>
-  <circle cx="184" cy="114" r="13" fill="#7bc6ff" stroke="none" filter="url(#glow)"/>
-</g>
-<path d="M888 335L520 720H735Z" fill="url(#beam)"/>
-<path d="M888 335L875 720H1090Z" fill="url(#beam)"/>
-<path d="M888 335L1165 720H1375Z" fill="url(#beam)"/>
-<g stroke="#83c9ff" stroke-width="7" fill="none" stroke-linecap="round">
-  <path d="M515 688v-82M482 688h66M492 612c15-22 36-22 50 0M470 586c27-39 67-39 94 0"/>
-  <path d="M1110 694v-92M1074 694h72M1085 607c15-22 37-22 50 0M1062 581c28-39 70-39 98 0"/>
-  <path d="M1330 710v-72M1298 710h64M1310 644c14-19 32-19 45 0"/>
-</g>
-<g fill="#84caff" filter="url(#glow)"><circle cx="520" cy="720" r="9"/><circle cx="888" cy="335" r="9"/><circle cx="1090" cy="720" r="9"/><circle cx="1375" cy="720" r="9"/></g>
-<text x="85" y="92" fill="#a7d8ff" fill-opacity=".76" font-family="Arial, sans-serif" font-size="28" font-weight="700" letter-spacing="3">GEO · MEO · LEO · RESOURCE ALLOCATION</text>
+<circle cx="1178" cy="270" r="7" fill="#b9e6ff" opacity=".92"/>
+<circle cx="1178" cy="270" r="30" fill="#69baff" opacity=".14"/>
+<circle cx="1178" cy="270" r="72" fill="#69baff" opacity=".055"/>
+<path d="M1020 270h316" stroke="#79c7ff" stroke-opacity=".08"/>
+<path d="M1178 112v316" stroke="#79c7ff" stroke-opacity=".06"/>
+<rect width="1600" height="865" filter="url(#grain)" opacity=".8"/>
+<rect x="1" y="1" width="1598" height="863" fill="none" stroke="#75bfff" stroke-opacity=".08"/>
 </svg>
