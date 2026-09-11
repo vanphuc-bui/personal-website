@@ -177,11 +177,24 @@
 
     .hero-photo {
       position: absolute;
-      inset: var(--nav) 0 0 43%;
+      inset: var(--nav) 0 0 0;
+      overflow: hidden;
+      background-color: #06111e;
+
+      /* Full-width hero image: the image continues behind the copy.
+         A smooth left-to-right navy gradient keeps the text readable
+         and removes the hard vertical edge between text and image. */
       background:
-        linear-gradient(90deg, #06111e 0%, rgba(6,17,30,.84) 10%, rgba(6,17,30,.22) 38%, rgba(6,17,30,.05) 100%),
-        linear-gradient(0deg, rgba(6,17,30,.65), transparent 45%),
-        url("images/hero-satellite.jpg") center / cover no-repeat;
+        linear-gradient(90deg,
+          rgba(6,17,30,.98) 0%,
+          rgba(6,17,30,.96) 14%,
+          rgba(6,17,30,.90) 28%,
+          rgba(6,17,30,.72) 43%,
+          rgba(6,17,30,.38) 58%,
+          rgba(6,17,30,.13) 76%,
+          rgba(6,17,30,.12) 100%),
+        linear-gradient(0deg, rgba(6,17,30,.68), rgba(6,17,30,.02) 52%),
+        url("images/hero-satellite.jpg") center right / cover no-repeat;
     }
 
     .hero-photo::after {
@@ -361,28 +374,30 @@
       border-bottom: 1px solid var(--line);
     }
 
+    /* Temporary real-photo placeholders from Unsplash.
+       Replace the URLs below later with your own photos if you prefer. */
     .img-5g {
       background-image:
         linear-gradient(rgba(5,15,26,.10), rgba(5,15,26,.25)),
-        url("images/5g-ntn.jpg");
+        url("https://images.unsplash.com/photo-1689672921275-ac0f8f462f82?auto=format&fit=crop&w=1200&q=80");
     }
 
     .img-satellite {
       background-image:
         linear-gradient(rgba(5,15,26,.10), rgba(5,15,26,.25)),
-        url("images/satellite.jpg");
+        url("https://images.unsplash.com/photo-1609000142140-fb449c139c82?auto=format&fit=crop&w=1200&q=80");
     }
 
     .img-ml {
       background-image:
         linear-gradient(rgba(5,15,26,.10), rgba(5,15,26,.25)),
-        url("images/ml-data.jpg");
+        url("https://images.unsplash.com/photo-1763568258367-1c52beb60be7?auto=format&fit=crop&w=1200&q=80");
     }
 
     .img-twin {
       background-image:
         linear-gradient(rgba(5,15,26,.10), rgba(5,15,26,.25)),
-        url("images/digital-twin.jpg");
+        url("https://images.unsplash.com/photo-1606206873764-fd15e242df52?auto=format&fit=crop&w=1200&q=80");
     }
 
     /* Nice fallback if the user has not added photos yet */
@@ -659,7 +674,7 @@
       min-height: 350px;
       background:
         linear-gradient(90deg, #081522 0%, rgba(8,21,34,.25) 17%, transparent 42%),
-        url("images/coco-nails.jpg") center / cover no-repeat;
+        url("https://images.unsplash.com/photo-1632345031435-8727f6897d53?auto=format&fit=crop&w=1600&q=80") center / cover no-repeat;
       background-color: #102236;
     }
 
@@ -737,7 +752,7 @@
       .research-grid { grid-template-columns: repeat(2, 1fr); }
       .timeline { grid-template-columns: repeat(2, 1fr); }
       .about-education { grid-template-columns: 1fr; }
-      .hero-photo { inset-left: 34%; opacity: .60; }
+      .hero-photo { inset: var(--nav) 0 0 0; opacity: .76; background-position: 64% center; }
       .beyond { grid-template-columns: 1fr; }
       .beyond-copy { padding: 50px 30px; }
     }
@@ -871,11 +886,6 @@
     </div>
   </header>
 
-
-  <!-- =========================================================
-       HERO
-       Replace images/hero-satellite.jpg with your own image.
-       ========================================================= -->
   <main id="top">
     <section class="hero">
       <div class="hero-photo"></div>
@@ -919,15 +929,6 @@
       </div>
     </section>
 
-
-    <!-- =========================================================
-         RESEARCH AREAS
-         Replace these 4 images later:
-         images/5g-ntn.jpg
-         images/satellite.jpg
-         images/ml-data.jpg
-         images/digital-twin.jpg
-         ========================================================= -->
     <section id="research">
       <div class="container">
         <div class="section-head">
@@ -989,11 +990,6 @@
       </div>
     </section>
 
-
-    <!-- =========================================================
-         SELECTED PUBLICATIONS
-         No magazine-cover image. Just five representative papers.
-         ========================================================= -->
     <section id="publications">
       <div class="container">
 
@@ -1100,10 +1096,6 @@
       </div>
     </section>
 
-
-    <!-- =========================================================
-         EXPERIENCE
-         ========================================================= -->
     <section id="experience">
       <div class="container">
 
@@ -1157,10 +1149,6 @@
       </div>
     </section>
 
-
-    <!-- =========================================================
-         ABOUT + EDUCATION
-         ========================================================= -->
     <section id="about">
       <div class="container about-education">
 
@@ -1206,7 +1194,6 @@
           </div>
         </div>
 
-
         <div>
           <div class="section-head">
             <div class="section-name">Education</div>
@@ -1248,11 +1235,6 @@
       </div>
     </section>
 
-
-    <!-- =========================================================
-         BEYOND ENGINEERING
-         Replace images/coco-nails.jpg with a REAL salon photo.
-         ========================================================= -->
     <section id="beyond" style="padding:0">
       <div class="beyond">
 
@@ -1260,9 +1242,7 @@
           <h2>Beyond Engineering</h2>
 
           <p>
-            Beyond research and technology, I am also involved in running
-            The Coco Nails in Aalborg — a local business where I work with
-            operations, customer experience, digital presence and business development.
+            Beyond research and technology, I am the owner of The Coco Nails in Aalborg, a growing local business serving 500+ customers every month. I oversee operations, customer experience, digital presence, marketing, and business development.
           </p>
 
           <a class="btn btn-dark"
@@ -1277,12 +1257,6 @@
       </div>
     </section>
 
-
-    <!-- =========================================================
-         CONTACT
-         FormSubmit works without hosting/backend.
-         First submission requires email activation.
-         ========================================================= -->
     <section id="contact">
       <div class="container">
 
@@ -1338,14 +1312,12 @@
 
   </main>
 
-
   <footer>
     <div class="container footer-row">
       <div>© <span id="year"></span> Van-Phuc Bui</div>
       <div>Aalborg, Denmark</div>
     </div>
   </footer>
-
 
   <script>
     document.getElementById("year").textContent = new Date().getFullYear();
