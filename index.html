@@ -666,35 +666,104 @@
     }
 
     .beyond {
-      display: grid;
-      grid-template-columns: .9fr 1.1fr;
-      min-height: 390px;
       border-top: 1px solid var(--line);
       border-bottom: 1px solid var(--line);
-      overflow: hidden;
-      background: #081522
+      background: radial-gradient(circle at 78% 15%, rgba(61, 140, 255, .10), transparent 34%), #081522
     }
 
-    .beyond-copy {
-      padding: 70px max(30px, calc((100vw - var(--max))/2));
-      padding-right: 50px
+    .beyond-inner {
+      width: min(calc(100% - 44px), var(--max));
+      margin: auto;
+      padding: 72px 0
     }
 
-    .beyond-copy h2 {
-      font-size: 30px;
-      margin-bottom: 18px
+    .beyond-head {
+      display: flex;
+      justify-content: space-between;
+      align-items: end;
+      gap: 42px;
+      margin-bottom: 28px
     }
 
-    .beyond-copy p {
+    .beyond-head h2 {
+      font-size: 32px;
+      line-height: 1.1;
+      letter-spacing: -.025em
+    }
+
+    .beyond-head p {
       color: var(--muted);
-      max-width: 510px;
-      font-size: 14px;
-      margin-bottom: 24px
+      max-width: 650px;
+      font-size: 15px
     }
 
-    .beyond-photo {
-      min-height: 390px;
-      background: linear-gradient(rgba(5, 18, 31, .36), rgba(5, 18, 31, .48)), linear-gradient(90deg, #081522 0%, rgba(8, 21, 34, .78) 18%, rgba(8, 21, 34, .28) 48%, rgba(8, 21, 34, .10) 100%), url("https://images.unsplash.com/photo-1632345031435-8727f6897d53?auto=format&fit=crop&w=1600&q=80") center/cover no-repeat
+    .beyond-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 20px
+    }
+
+    .venture-card {
+      position: relative;
+      min-height: 360px;
+      overflow: hidden;
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      background-position: center;
+      background-size: cover;
+      box-shadow: 0 22px 55px rgba(0, 0, 0, .20)
+    }
+
+    .venture-card::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, rgba(5, 16, 28, .08) 8%, rgba(5, 16, 28, .24) 40%, rgba(5, 16, 28, .95) 100%)
+    }
+
+    .venture-card.nails {
+      background-image: url("https://images.unsplash.com/photo-1632345031435-8727f6897d53?auto=format&fit=crop&w=1400&q=82")
+    }
+
+    .venture-card.vietnam {
+      background-image: url("https://images.unsplash.com/photo-1528127269322-539801943592?auto=format&fit=crop&w=1400&q=82")
+    }
+
+    .venture-content {
+      position: absolute;
+      z-index: 1;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      padding: 30px
+    }
+
+    .venture-kicker {
+      color: #8bc2ff;
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+      margin-bottom: 9px
+    }
+
+    .venture-card h3 {
+      font-size: 25px;
+      line-height: 1.15;
+      margin-bottom: 11px
+    }
+
+    .venture-card p {
+      color: #d2dce7;
+      max-width: 560px;
+      font-size: 15px;
+      margin-bottom: 20px
+    }
+
+    .venture-card .btn {
+      min-height: 44px;
+      background: rgba(5, 19, 33, .72);
+      backdrop-filter: blur(8px)
     }
 
     .contact-panel {
@@ -864,7 +933,7 @@
     .pub-number { font-size: 13.5px }
     .pub-title { font-size: 19px; line-height: 1.4 }
     .pub-meta { font-size: 15.5px; line-height: 1.6 }
-    .beyond-copy p { font-size: 17px; line-height: 1.7 }
+    .beyond-head p, .venture-card p { font-size: 17px; line-height: 1.7 }
     .contact-panel p { font-size: 17px; line-height: 1.65 }
     .contact-email { font-size: 16px }
     .field label { font-size: 13.5px }
@@ -891,12 +960,14 @@
         grid-template-columns: repeat(2, 1fr)
       }
 
-      .beyond {
-        grid-template-columns: 1fr
+      .beyond-inner {
+        padding: 58px 0
       }
 
-      .beyond-copy {
-        padding: 58px 30px
+      .beyond-head {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 14px
       }
 
       .contact-panel {
@@ -975,8 +1046,22 @@
       .research-grid,
       .timeline,
       .stats,
-      .form-row {
+      .form-row,
+      .beyond-grid {
         grid-template-columns: 1fr
+      }
+
+      .beyond-inner {
+        width: min(calc(100% - 28px), var(--max));
+        padding: 50px 0
+      }
+
+      .venture-card {
+        min-height: 380px
+      }
+
+      .venture-content {
+        padding: 24px
       }
 
       .contact-panel {
@@ -1247,14 +1332,36 @@
 
     <section id="beyond" style="padding:0">
       <div class="beyond">
-        <div class="beyond-copy">
-          <h2>Beyond Engineering</h2>
-          <p>Beyond research and technology, I am the owner of The Coco Nails in Aalborg, a growing local business
-            serving 500+ customers every month. I oversee operations, customer experience, digital presence, marketing,
-            and business development.</p><a class="btn btn-dark" href="https://thecoconails.dk" target="_blank">Visit
-            The Coco Nails →</a>
+        <div class="beyond-inner">
+          <div class="beyond-head">
+            <h2>Beyond Engineering</h2>
+            <p>I also enjoy building real-world businesses and digital products, combining technology with customer
+              experience, content, marketing, SEO and day-to-day operations.</p>
+          </div>
+          <div class="beyond-grid">
+            <article class="venture-card nails">
+              <div class="venture-content">
+                <div class="venture-kicker">Local business · Aalborg</div>
+                <h3>The Coco Nails</h3>
+                <p>I am the owner of The Coco Nails in Aalborg, a growing salon serving 500+ customers every month. I
+                  oversee operations, customer experience, digital presence, marketing and business development.</p>
+                <a class="btn btn-dark" href="https://thecoconails.dk" target="_blank" rel="noopener noreferrer">Visit
+                  The Coco Nails →</a>
+              </div>
+            </article>
+            <article class="venture-card vietnam">
+              <div class="venture-content">
+                <div class="venture-kicker">Digital travel project · Denmark / Vietnam</div>
+                <h3>RejsTilVietnam.dk</h3>
+                <p>I build RejsTilVietnam.dk, an independent Danish travel guide for Vietnam. The project combines
+                  first-hand local knowledge with practical travel content, web development, SEO and affiliate
+                  partnerships to help Danish travellers plan their trips with confidence.</p>
+                <a class="btn btn-dark" href="https://rejstilvietnam.dk/" target="_blank" rel="noopener noreferrer">Visit
+                  RejsTilVietnam.dk →</a>
+              </div>
+            </article>
+          </div>
         </div>
-        <div class="beyond-photo"></div>
       </div>
     </section>
 
